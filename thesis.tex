@@ -1,0 +1,82 @@
+\documentclass[
+	%draft,
+	final,
+	paper=a4,
+	paper=portrait,
+	fontsize=11pt,
+	version=last,
+	twoside,
+	ngerman,
+	titlepage,
+	toc=listof,
+	toc=bibliography,
+]{scrbook}
+
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[babel,german=quotes]{csquotes}
+
+\input{settings/generic}
+\input{settings/glossaries}
+\input{settings/listings}
+\input{settings/bib}
+
+\title{Toller Titel einer\\ großartigen Arbeit}
+\author{Max Mustermann}
+\date{\today}
+
+\makeatletter
+\let\ThesisTitle\@title
+\let\ThesisDate\@date
+\makeatother
+
+\begin{document}
+
+\ifdraft{}{
+	% Deckblatt
+	\input{content/title}
+	\thispagestyle{empty}
+	\cleardoublepage
+	
+	\input{content/zusammenfassung}
+	
+	% Inhaltsverzeichnis
+	\pagenumbering{roman}
+	\tableofcontents
+	\cleardoublepage
+	
+	% Nummerierung zurücksetzen für den Inhalt
+	\pagenumbering{arabic}
+}
+
+% Inhalt
+\input{content/einleitung}
+\input{content/grundlagen}
+\input{content/konzept}
+\input{content/implementierung}
+\input{content/evaluation}
+\input{content/schluss}
+
+\appendix
+\ifdraft{}{
+	%Anhang
+	\input{content/anhang}
+	
+	% Abbildungs- und Tabellenverzeichnisse
+	\listoffigures
+	\listoftables
+	
+	% Glossar
+	\printglossaries
+	
+	% Literatur
+	\printbibliography
+	\vfill
+	
+	% Versicherung
+	\pagebreak
+	\input{content/versicherung}
+}
+
+\end{document}

@@ -1,0 +1,36 @@
+% 3/2-facher Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing
+
+% Fix für floats
+\usepackage{scrhack}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage{textcomp}
+
+\usepackage{booktabs}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\usepackage{hyperref}
+
+\usepackage{caption}
+% Fehler mit nicht zentrierten Captions beheben
+\captionsetup{width=2\textwidth}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{ifdraft}
+\ifdraft{\let\ifxdraft\iftrue}{\let\ifxdraft\iffalse}
+
+% Hurenkind und Schusterjunge
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
