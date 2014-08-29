@@ -4,6 +4,8 @@ Uni Oldenburg Latex Template für Abschlussarbeiten
 
 Das Template soll eine Vorlage für die Erstellung von Abschlussarbeiten in der Informatik an der Universität Oldenburg darstellen, zum Beispiel bei Bachelor- oder Masterarbeiten. Das Format entspricht grob den Vorgaben der Universität und wurde in dieser Form auch ohne Anmerkungen akzeptiert.
 
+**Vorschau:** https://stderr.cc/~bioxz/github/uniol-latex-thesis/thesis.pdf
+
 Getting Started
 ---------------
 Auf der Titelseite müssen Namen, Titel und Abteilung angepasst werden, ebenso in der Versicherung am Ende der Arbeit.
